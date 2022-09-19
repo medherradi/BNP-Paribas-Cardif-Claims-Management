@@ -125,7 +125,7 @@ if __name__ == "__main__":
         cont_col = [col for col in train.columns if col not in dis_col + cat_col + ["ID", "target", "kfold"] and train[col].nunique()>2]
 
         #print(train["kfold"].value_counts())
-        # training lightgbmclasifire model for 10 fold cross validation 
+        # training lightgbmclassifier model for 10 fold cross validation 
         lgbmpred_list = []
         lgbmpred_test = []
         for fold in range(10):

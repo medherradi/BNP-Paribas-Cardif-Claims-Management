@@ -120,7 +120,7 @@ if __name__ == "__main__":
         cat_col = [col for col in train.columns if train[col].dtype == "O"]
         cont_col = [col for col in train.columns if col not in dis_col + cat_col + ["ID", "target", "kfold"] and train[col].nunique()>2]
         
-        # training xgboostclasifier model for 10 fold cross validation 
+        # training catboostclassifier model for 10 fold cross validation 
         ctbpred_list = []
         ctpred_test = []
         for fold in range(10):
